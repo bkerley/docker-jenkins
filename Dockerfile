@@ -14,7 +14,7 @@ RUN service jenkins stop
 RUN apt-get install -y git
 
 # rbenv support
-RUN apt-get install zlib1g-dev openssl  libssl-dev libreadline-dev git-core
+RUN apt-get install -y build-essential zlib1g-dev openssl libssl-dev libreadline-dev git-core
 
 CMD java -jar /usr/share/jenkins/jenkins.war
 EXPOSE 8080
